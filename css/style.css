@@ -1,13 +1,4 @@
 :root {
-  /* Define Colors as colors */
-  --green: #00ebc7;
-  --red: #ff5470;
-  --yellow: #fde24f;
-  --black: #1b2d45;
-  --darkBlue: #00214d;
-  --grey: #bfbfbf;
-  --lightGrey: #f2f4f6;
-
   /* Define Tailwind Colors */
   --blueGray-50: #f8fafc;
   --blueGray-100: #f1f5f9;
@@ -251,9 +242,22 @@
   --rose-800: #9f1239;
   --rose-900: #881337;
 
+  /* Define Custom Colors */
+  --green: #00ebc7;
+  --red: #ff5470;
+  --yellow: #fde24f;
+  --black: #1b2d45;
+  --darkBlue: #00214d;
+  --grey: #bfbfbf;
+  --lightGrey: #f2f4f6;
+  --dark-mode-black: #0f1113;
+  --dark-mode-white: #fafafa;
+  --light-mode-black: var(--gray-800);
+  --light-mode-white: #fafafa;
+
   /* Define Colors intentions */
-  --background: var(--lightGrey);
-  --textColor: var(--black);
+  --background: var(--light-mode-white);
+  --textColor: var(--light-mode-black);
 }
 
 body {
@@ -262,6 +266,6 @@ body {
 }
 
 .dark {
-  --background: var(--black);
-  --textColor: var(--lightGrey);
+  --background: var(--dark-mode-black);
+  --textColor: var(--dark-mode-white);
 }
