@@ -1,4 +1,18 @@
 :root {
+  /* Fonts */
+  --heading-font: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --body-font: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial,
+  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --h1: 3.052em; 
+  --h2: 2.441em; 
+  --h3: 1.953em; 
+  --h4: 1.563em; 
+  --h5: 1.25em; 
+  --smallText: 0.8em;
+
+
+
   /* Define Tailwind Colors */
   --blueGray-50: #f8fafc;
   --blueGray-100: #f1f5f9;
@@ -260,9 +274,79 @@
   --textColor: var(--light-mode-black);
 }
 
+
+html {
+  font-size: 100%;
+} /*16px*/
+
 body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  line-height: 1.75;
   background: var(--background);
   color: var(--textColor);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: var(--heading-font);
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+.h1 {
+  margin-top: 0;
+  font-size: var(--h1);
+}
+
+.h2 {
+  font-size: var(--h2);
+}
+
+.h3 {
+  font-size: var(--h3);
+}
+
+.h4 {
+  font-size: var(--h4);
+}
+
+.h5 {
+  font-size: var(--h5);
+}
+
+small,
+.text-small {
+  font-size: var(--smallText);
 }
 
 .dark {
