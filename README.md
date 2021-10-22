@@ -1,1 +1,1 @@
-# wp-blank-starter
+# personalized starter
