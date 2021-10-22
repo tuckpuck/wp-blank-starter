@@ -263,6 +263,7 @@
   --black: #1b2d45;
   --darkBlue: #00214d;
   --grey: #bfbfbf;
+  --white: #fff;
   --lightGrey: #f2f4f6;
   --dark-mode-black: #0f1113;
   --dark-mode-white: #fafafa;
@@ -289,6 +290,14 @@ body {
 
 p {
   margin-bottom: 1rem;
+  max-width: 40em;
+}
+
+p a,
+blockquote a {
+  color: var(--light-mode-black);
+  text-decoration: none;
+  border-bottom: solid 2px var(--green-300)
 }
 
 h1,
@@ -349,7 +358,18 @@ small,
   font-size: var(--smallText);
 }
 
+blockquote {
+  border: solid 1px var(--lightBlue-200);
+  padding: 2em;
+  margin: 0px;
+  background-color: var(--white);
+}
+
 .dark {
   --background: var(--dark-mode-black);
   --textColor: var(--dark-mode-white);
+}
+
+.dark a {
+    color: var(--dark-mode-light);
 }
