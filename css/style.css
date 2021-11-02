@@ -11,9 +11,10 @@
   --h3: 1.953em;
   --h4: 1.563em;
   --h5: 1.25em;
+  --h6: 1.1em;
   --smallText: 0.8em;
 
-  /* Define Tailwind Colors */
+  /* Tailwind Colors */
   --blueGray-50: #f8fafc;
   --blueGray-100: #f1f5f9;
   --blueGray-200: #e2e8f0;
@@ -256,26 +257,33 @@
   --rose-800: #9f1239;
   --rose-900: #881337;
 
-  /* Define Custom Colors */
+  /* Custom Colors */
   --green: #00ebc7;
   --red: #ff5470;
   --yellow: #fde24f;
+  --blue: #5b8bc9;
   --black: #1b2d45;
   --darkBlue: #00214d;
   --grey: #bfbfbf;
   --white: #fff;
   --lightGrey: #f2f4f6;
-  --dark-mode-black: #0f1113;
-  --dark-mode-white: #fafafa;
-  --light-mode-black: var(--gray-800);
-  --light-mode-white: #fafafa;
+  --dark-mode-black-background: #0f1113;
+  --dark-mode-white-background: #fafafa;
+  --light-mode-black-background: var(--gray-800);
+  --light-mode-white-background: #fafafa;
+  --white-text: #fafafa;
+  --black-text: #0f1113;
 
   /* Styles */
   --border: solid 1px var(--gray-300);
+  --border-primary: solid 1px var(--blue);
+  --border-danger: solid 1px var(--red);
 
   /* Define Colors intentions */
-  --background: var(--light-mode-white);
-  --textColor: var(--light-mode-black);
+  --primary: var(--blue);
+  --danger: var(--red);
+  --warning: var(--yellow);
+  --success: var(--green);
 }
 
 html {
@@ -284,10 +292,10 @@ html {
 
 body {
   font-family: var(--body-font);
+  background: var(--light-mode-white-background);
+  color: var(--black-text);
   font-weight: 400;
   line-height: 1.75;
-  background: var(--background);
-  color: var(--textColor);
 }
 
 p {
@@ -297,7 +305,7 @@ p {
 
 p a,
 blockquote a {
-  color: var(--light-mode-black);
+  color: var(--black-text);
   text-decoration: none;
   border-bottom: solid 2px var(--green-300);
 }
@@ -306,7 +314,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 3rem 0 1.38rem;
   font-family: var(--heading-font);
   font-weight: 300;
@@ -334,6 +343,10 @@ h5 {
   font-size: var(--h5);
 }
 
+h6 {
+  font-size: var(--h6);
+}
+
 .h1 {
   margin-top: 0;
   font-size: var(--h1);
@@ -355,6 +368,10 @@ h5 {
   font-size: var(--h5);
 }
 
+.h6 {
+  font-size: var(--h6);
+}
+
 small,
 .text-small {
   font-size: var(--smallText);
@@ -362,18 +379,18 @@ small,
 
 blockquote {
   border: solid 1px var(--lightBlue-200);
+  background-color: var(--light-mode-white-background);
   padding: 2em;
   margin: 0px;
-  background-color: var(--white);
 }
 
 .dark {
-  --background: var(--dark-mode-black);
-  --textColor: var(--dark-mode-white);
+  background: var(--dark-mode-black-background);
+  color: var(--white-text);
 }
 
 .dark a {
-  color: var(--dark-mode-light);
+  color: var(--dark-mode-white-background);
 }
 
 label {
@@ -405,4 +422,44 @@ select {
 
 hr {
   border-top: var(--border);
+}
+
+button {
+  appearance: none;
+  background-color: var(--light-mode-white-background);
+  color: var(--primary);
+  border: var(--border-primary);
+  border-radius: 4px;
+  padding: 5px 20px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button:hover {
+}
+
+button[disabled] {
+  opacity: 0.4;
+}
+
+button.cancel {
+  background-color: var(--danger);
+  color: var(--light-mode-white-background);
+  border: var(--border-danger);
+}
+
+button.warning {
+  background-color: var(--warning);
+  color: var(--light-mode-white-background);
+  border: var(--border-warning);
+}
+
+button.success {
+  background-color: var(--success);
+  color: var(--light-mode-white-background);
+  border: var(--border-success);
+}
+
+button.small {
+  font-size: var(--smallText);
 }
