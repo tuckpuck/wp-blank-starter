@@ -1,17 +1,17 @@
 :root {
   /* Fonts */
-  --heading-font: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --heading-font: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --body-font: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial,
-  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --h1: 3.052em; 
-  --h2: 2.441em; 
-  --h3: 1.953em; 
-  --h4: 1.563em; 
-  --h5: 1.25em; 
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --h1: 3.052em;
+  --h2: 2.441em;
+  --h3: 1.953em;
+  --h4: 1.563em;
+  --h5: 1.25em;
   --smallText: 0.8em;
-
-
 
   /* Define Tailwind Colors */
   --blueGray-50: #f8fafc;
@@ -270,11 +270,13 @@
   --light-mode-black: var(--gray-800);
   --light-mode-white: #fafafa;
 
+  /* Styles */
+  --border: solid 1px var(--gray-300);
+
   /* Define Colors intentions */
   --background: var(--light-mode-white);
   --textColor: var(--light-mode-black);
 }
-
 
 html {
   font-size: 100%;
@@ -297,7 +299,7 @@ p a,
 blockquote a {
   color: var(--light-mode-black);
   text-decoration: none;
-  border-bottom: solid 2px var(--green-300)
+  border-bottom: solid 2px var(--green-300);
 }
 
 h1,
@@ -371,5 +373,36 @@ blockquote {
 }
 
 .dark a {
-    color: var(--dark-mode-light);
+  color: var(--dark-mode-light);
+}
+
+label {
+  display: block;
+  font-size: var(--smallText);
+}
+
+input,
+textarea {
+  border: var(--border);
+  border-radius: 4px;
+  padding: 8px 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 5rem;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+select {
+  border: var(--border);
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+
+hr {
+  border-top: var(--border);
 }

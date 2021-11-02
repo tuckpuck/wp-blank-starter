@@ -53,14 +53,30 @@
   </ul>
 
   <form action="">
-    <div><label for="text">Form Label</label><input id="text" type="text"></div>
-    <div><label for="number">Form Label</label><input id="number" type="number"></div>
-    <div><label for="dropdown">Form Label</label><input type="text" id="dropdown" name="city" list="cityname">
+    <div><label for="text">Text</label><input id="text" type="text" placeholder="Tucker Triggs"></div>
+    <div><label for="number">Number</label><input id="number" type="number"></div>
+    <div><label for="email">Email</label><input id="email" type="email"></div>
+    <div><label for="textarea">Textarea</label><textarea id="textarea">Default value</textarea></div>
+    <div><label for="dropdown">Select (input)</label><input type="text" id="dropdown" name="city" list="cityname">
       <datalist id="cityname">
         <option value="Boston">
         <option value="Cambridge">
       </datalist>
-    <button>submit</button><button>cancel</button>
+
+      <label for="select">Select (select)</label>
+      <select id="select" name="select">
+        <option value="" selected>Please choose</option>
+
+        <option value="Mr">Mr</option>
+        <option value="Miss">Miss</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Ms">Ms</option>
+
+        <option value="Dr">Dr</option>
+        <option value="Other">Other</option>
+      </select>
+      <br>
+      <button>submit</button><button>cancel</button>
   </form>
 
   <p>Horizontal rule:</p>
