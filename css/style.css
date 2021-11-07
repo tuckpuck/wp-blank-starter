@@ -14,6 +14,17 @@
   --h6: 1.1em;
   --smallText: 0.8em;
 
+  /* Elevations */
+  --level-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --level-2: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --level-3: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-4: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-5: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --level-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
   /* Tailwind Colors */
   --blueGray-50: #f8fafc;
   --blueGray-100: #f1f5f9;
@@ -380,10 +391,11 @@ small,
 }
 
 blockquote {
-  border: solid 1px var(--lightBlue-200);
+  border: solid 1px var(--blue-100);
   background-color: var(--light-mode-white-background);
   padding: 2em;
   margin: 0px;
+  /* box-shadow: var(--level-2); */
 }
 
 .dark {
@@ -426,15 +438,18 @@ hr {
   border-top: var(--border);
 }
 
-button {
+button,
+.button {
   appearance: none;
   background-color: var(--primary);
   color: var(--white-text);
   border: var(--border-primary);
   border-radius: 4px;
   padding: 5px 20px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--level-2);
   cursor: pointer;
+  margin: 10px 0px;
+  transition: 0.3s ease-in-out box-shadow;
 }
 
 button.outline {
@@ -444,6 +459,7 @@ button.outline {
 }
 
 button:hover {
+  box-shadow: var(--level-3);
 }
 
 button[disabled] {
@@ -489,4 +505,23 @@ button.success-outline {
 
 button.small {
   font-size: var(--smallText);
+}
+
+.shadow-sm {
+  box-shadow: var(--level-1);
+}
+.shadow {
+  box-shadow: var(--level-2);
+}
+.shadow-md {
+  box-shadow: var(--level-3);
+}
+.shadow-lg {
+  box-shadow: var(--level-4);
+}
+.shadow-xl {
+  box-shadow: var(--level-5);
+}
+.shadow-inset {
+  box-shadow: var(--level-inset);
 }
