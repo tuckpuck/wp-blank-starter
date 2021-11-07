@@ -525,3 +525,9 @@ button.small {
 .shadow-inset {
   box-shadow: var(--level-inset);
 }
+
+.card {
+  padding: 20px;
+  display: inline-block;
+  border: solid 1px var(--blue-100);
+}
