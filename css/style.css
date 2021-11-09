@@ -561,3 +561,18 @@ button.small {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
