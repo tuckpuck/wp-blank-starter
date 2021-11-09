@@ -531,3 +531,8 @@ button.small {
   display: inline-block;
   border: solid 1px var(--blue-100);
 }
+
+.layout {
+  margin: 0 auto;
+  width: 95%;
+}
