@@ -26,6 +26,9 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --level-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 
+  /* Positioning */
+  --containerPadding: 2.5%;
+
   /* Tailwind Colors */
   --blueGray-50: #f8fafc;
   --blueGray-100: #f1f5f9;
@@ -302,6 +305,7 @@
 
 html {
   font-size: 100%;
+  box-sizing: border-box;
 } /*16px*/
 
 body {
@@ -311,6 +315,35 @@ body {
   color: var(--black-text);
   font-weight: 400;
   line-height: 1.75;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: var(--darkBlue);
+  color: white;
+  height: 3rem;
+  box-shadow: var(--level-2);
+  align-items: center;
+  padding: 0 var(--containerPadding);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav a + a {
+  margin-left: 10px;
+}
+
+.logo {
+  font-size: var(--base-font-size);
+  margin: 0;
 }
 
 p {
@@ -535,8 +568,7 @@ button.small {
 }
 
 .layout {
-  margin: 0 auto;
-  width: 95%;
+  padding: 3rem var(--containerPadding);
 }
 
 .grid-2 {
@@ -560,6 +592,7 @@ button.small {
 }
 
 .flex {
+  display: flex;
 }
 
 .flex-center {
