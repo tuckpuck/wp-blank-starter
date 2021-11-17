@@ -341,6 +341,23 @@ header nav a + a {
   margin-left: 10px;
 }
 
+footer {
+  background: var(--darkBlue);
+  color: var(--white-text);
+  padding: 2rem var(--containerPadding);
+  text-align: center;
+}
+
+footer nav a {
+  color: var(--white-text);
+}
+
+footer p {
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: none;
+}
+
 .logo {
   font-size: var(--base-font-size);
   margin: 0;
