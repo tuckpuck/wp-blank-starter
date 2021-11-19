@@ -26,9 +26,6 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --level-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 
-  /* Positioning */
-  --containerPadding: 2.5%;
-
   /* Tailwind Colors */
   --blueGray-50: #f8fafc;
   --blueGray-100: #f1f5f9;
@@ -301,6 +298,10 @@
   --danger: var(--red);
   --warning: var(--yellow);
   --success: var(--green);
+
+  /* Standards */
+  --containerPadding: 2.5%;
+  --borderRadius: 10px;
 }
 
 html {
@@ -348,8 +349,13 @@ footer {
   text-align: center;
 }
 
+footer nav {
+  margin: 0.2rem 0;
+}
+
 footer nav a {
   color: var(--white-text);
+  text-decoration: none;
 }
 
 footer p {
@@ -578,7 +584,7 @@ button.small {
   box-shadow: var(--level-inset);
 }
 
-.card {
+.box {
   padding: 20px;
   display: inline-block;
   border: solid 1px var(--blue-100);
@@ -622,6 +628,24 @@ button.small {
 
 .flex-around {
   justify-content: space-around;
+}
+
+.card-secondary {
+  border: solid 1px var(--blue-100);
+  background-color: var(--light-mode-white-background);
+  padding: 2em;
+  box-shadow: var(--level-2);
+  border-radius: var(--borderRadius);
+}
+
+/* First item never has margin top */
+.card-secondary > *:first-child {
+  margin-top: 0;
+}
+
+/* Last item never has margin bottom */
+.card-secondary > *:last-child {
+  margin-bottom: 0;
 }
 
 /* Media Queries */
