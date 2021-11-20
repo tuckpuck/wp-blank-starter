@@ -471,10 +471,12 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   border: var(--border);
   border-radius: 4px;
   padding: 8px 5px;
+  width: 100%;
 }
 
 textarea {
@@ -596,22 +598,38 @@ button.small {
 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
 }
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
 }
 
 .grid-4 {
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
 }
 
 .grid-5 {
   grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
 }
 
 .grid-6 {
   grid-template-columns: repeat(6, 1fr);
+  grid-gap: 30px;
+}
+
+.grid-two-thirds-left {
+  display: grid;
+  grid-template-columns: 66% 32%;
+  grid-gap: 30px;
+}
+.grid-two-thirds-right {
+  display: grid;
+  grid-template-columns: 32% 66%;
+  grid-gap: 30px;
 }
 
 .flex {
@@ -657,7 +675,9 @@ button.small {
   .grid-3,
   .grid-4,
   .grid-5,
-  .grid-6 {
+  .grid-6,
+  .grid-two-thirds-right,
+  .grid-two-thirds-left {
     display: grid;
   }
   .flex,
@@ -673,7 +693,9 @@ button.small {
   .grid-3,
   .grid-4,
   .grid-5,
-  .grid-6 {
+  .grid-6,
+  .grid-two-thirds-right,
+  .grid-two-thirds-left {
     display: block;
   }
   .flex,
